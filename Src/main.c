@@ -119,6 +119,20 @@ void SystemClock_Config(void)
 uint8_t checkButtonState(GPIO_TypeDef* PORT, uint8_t PIN, uint8_t edge, uint8_t samples_window, uint8_t samples_required)
 {
 	  //type your code for "checkButtonState" implementation here:
+
+	/*
+	(\____/)
+	(͡ ͡°͜ ʖ ͡ ͡°) your code for "checkButtonState" implementation here:
+	 \╭☞             \╭☞
+
+	*/
+
+	for(; samples_window > 0 ; samples_window--){
+
+		// read data
+		GetState()
+	}
+
 }
 
 
