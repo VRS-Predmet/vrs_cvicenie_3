@@ -11,18 +11,25 @@
 #include "main.h"
 
 // defines for input port used by button
-#define		GPIO_PORT_BUTTON				GPIOA
-#define		GPIO_PIN_BUTTON					3
+#define		GPIO_PORT_BUTTON				GPIOB
+#define		GPIO_PIN_BUTTON					4
+
+// defines for output port used by LED
+#define		GPIO_PORT_LED					GPIOA
+#define		GPIO_PIN_LED					4
 
 // defines for "checkButtonState"
 #define		TRIGGER_RISE					0
 #define		TRIGGER_FALL					1
 
 #define		BUTTON_EXTI_TRIGGER				TRIGGER_FALL
-#define		BUTTON_EXTI_SAMPLES_WINDOW		30
-#define		BUTTON_EXTI_SAMPLES_REQUIRED	20
+#define		BUTTON_EXTI_SAMPLES_WINDOW		100
+#define		BUTTON_EXTI_SAMPLES_REQUIRED	90
 
-
+#define 	GET_GPIO_STATE(port, pin)		(((port)->IDR & (1<<(pin)))>>(pin))
+#define 	LED_ON					(GPIO_PORT_LED->ODR |= (uint32_t)(1 << GPIO_PIN_LED))
+#define 	LED_OFF					(GPIO_PORT_LED->ODR &= ~(uint32_t)(1 << GPIO_PIN_LED))
+#define 	LED_TOGGLE			    (GPIO_PORT_LED->ODR ^= (uint32_t)(1 << GPIO_PIN_LED))
 /**
  *  Function checks if the button was pressed or EXTI detection was false - positive.
  *  @input_param_1 - PORT: GPIO port connected to button.
