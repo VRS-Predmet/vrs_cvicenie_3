@@ -24,12 +24,11 @@
 
 # Zadanie
 - Podľa ukážkového programu z vetvy "master" nakonfigurujte MCU tak, aby tlačidlo pripojené ku vstupnému GPIO pinu bolo zdrojom externého prerušenia a LED pripojená ku výstupnému GPIO pinu zmenila svoj stav po každom stlačení tlačidla.
+- Vetvy "zadanie_cv4" a "zadanie_cv_4_f302r8" obsahuju sablonu pre vypracovanie projektu. Vetva "zadanie_cv4" je urcena pre mikrokontroler F303k8 zatial co druha vetva je urcena pre mikrokontroler, ktory ma uvedeny v nazve.
+- Znenie zadania je v kazdej sablone prisposobene vyvojovej doske. 
 
 ### Úlohy
-- Stiahnúť/naklonovať vetvu "zadanie_cv4", ktorá predstavuje šablónu projektu, do ktorej je nutné vypracovať nasledujúce úlohy.
+- Stiahnúť/naklonovať vetvu "zadanie_cv4" alebo zadanie_cv_4_f302r8, ktorá predstavuje šablónu projektu, do ktorej je nutné vypracovať zadanie.
 - Pre svoje zadanie si vtvoriť vlastný github repozitár, kam sa nahraje stiahnutá šablóná.
 
-- V súbore "Src/main.c" implementovať konfiguráciu GPIO periférii. GPIOB-4 je vyhradené pre tlačidlo a GPIOA-4 je vyhradené pre LED.
-- V súbore "Src/main.c" implementovať konfiguráciu EXTI pre vstupný pin, ku ktorému je pripojené tlačidlo.
-- V súbore "Src/main.c" implementovať funkciu "checkButtonState", ktorej deklarácia sa nachádza v "Inc/assignment.h".
-- V súbore "Inc/assignment.h" upraviť hodnoty makier, ktoré slúžia ako vstupné argumenty do funkcie "checkButtonState", podľa vlastnej potreby.
+- Vypracovat zadanie podla pokynov v "README" vo vetve zadanie_cv4/zadanie_cv_4_f302r8 a pokynov v sablone.
