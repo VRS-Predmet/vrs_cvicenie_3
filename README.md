@@ -23,12 +23,10 @@
 - tabulka vektorov prerušení a ich obsluha je definovaná v súbore "startup_stm32f303x8.s"
 
 # Zadanie
-- Podľa ukážkového programu z vetvy "master" nakonfigurujte MCU tak, aby tlačidlo pripojené ku vstupnému GPIO pinu bolo zdrojom externého prerušenia a LED pripojená ku výstupnému GPIO pinu zmenila svoj stav po každom stlačení tlačidla.
-- Vetvy "zadanie_cv4" a "zadanie_cv_4_f302r8" obsahuju sablonu pre vypracovanie projektu. Vetva "zadanie_cv4" je urcena pre mikrokontroler F303k8 zatial co druha vetva je urcena pre mikrokontroler, ktory ma uvedeny v nazve.
-- Znenie zadania je v kazdej sablone prisposobene vyvojovej doske. 
+- Nakonfigurujte MCU tak, aby tlačidlo pripojené ku vstupnému GPIO pinu (GPIOA-3) bolo zdrojom externého prerušenia a LED pripojená ku výstupnému GPIO pinu (GPIOA-4) zmenila svoj stav po každom stlačení tlačidla. Schéma zapojenia je totožná so schémou z predchádzajúceho zadania. 
 
 ### Úlohy
-- Stiahnúť/naklonovať vetvu "zadanie_cv4" alebo zadanie_cv_4_f302r8, ktorá predstavuje šablónu projektu, do ktorej je nutné vypracovať zadanie.
-- Pre svoje zadanie si vtvoriť vlastný github repozitár, kam sa nahraje stiahnutá šablóná.
-
-- Vypracovat zadanie podla pokynov v "README" vo vetve zadanie_cv4/zadanie_cv_4_f302r8 a pokynov v sablone.
+- Vytvoriť vlastný projekt s využitím grafického rozhrania CubeMX.
+- Nakonfigurovať periférie MCU podľa potrieb tohto zadania.
+- V obsluhe prerušenia implementovať "debounce", aby sa predišlo falošnej detekcii.
+- Po úspešnom detegovaní nábežnej/dobežnej hrany zmeniť stav LED (zvoľte si, ktorú hranu chcete detegovať).
