@@ -1,6 +1,8 @@
 # Náplň cvičenia
+- odovzdanie zadania 2
 - zoznámenie sa s prerušeniami - NVIC
 - konfigurácia externých prerušení od GPIO s EXTI
+- oboznámenie sa a pracovanie na zadaní 3
 
 # Prerušenia
 - "prerušenie" preruší vykonávania hlavnej slučky programu a vykoná sa fukcia, obsluha prerušenia, po ktorej vykonaní bude pokračovať beh hlavnej slučky programu
@@ -22,11 +24,11 @@
 
 - tabulka vektorov prerušení a ich obsluha je definovaná v súbore "startup_stm32f303x8.s"
 
-# Zadanie
+# Zadanie 3 (2b)
 - Nakonfigurujte MCU tak, aby tlačidlo pripojené ku vstupnému GPIO pinu (GPIOA-3) bolo zdrojom externého prerušenia a LED pripojená ku výstupnému GPIO pinu (GPIOA-4) zmenila svoj stav po každom stlačení tlačidla. Schéma zapojenia je totožná so schémou z predchádzajúceho zadania. 
 
 ### Úlohy
 - Vytvoriť vlastný projekt s využitím grafického rozhrania CubeMX.
-- Nakonfigurovať periférie MCU podľa potrieb tohto zadania.
-- V obsluhe prerušenia implementovať "debounce", aby sa predišlo falošnej detekcii.
+- Nakonfigurovať periférie MCU podľa potrieb tohto zadania (input/output/interrupt).
+- V obsluhe prerušenia implementovať "debounce", aby sa predišlo falošnej detekcii (zo zadania 2).
 - Po úspešnom detegovaní nábežnej/dobežnej hrany zmeniť stav LED (zvoľte si, ktorú hranu chcete detegovať).
