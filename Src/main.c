@@ -158,10 +158,11 @@ void EXTI3_IRQHandler(void)
 	}
 
 	//Clear pending register flag
+	NVIC->ICPR[0] |= (1 << 9);
 	EXTI->PR |= (EXTI_PR_PIF3);
-	NVIC->ICPR[0] |= (0x0200);
-
-	for(int cnt = 0; cnt < 500; ++cnt){};
+	// Sync. instructions
+	__DSB();
+	__ISB();
 }
 
 /* USER CODE BEGIN 4 */
