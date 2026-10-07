@@ -102,7 +102,9 @@
 - Nakonfigurujte MCU tak, aby tlačidlo pripojené ku vstupnému GPIO pinu (GPIOA-3) bolo zdrojom externého prerušenia a LED pripojená ku výstupnému GPIO pinu (GPIOA-4) zmenila svoj stav po každom stlačení tlačidla. Schéma zapojenia je totožná so schémou z predchádzajúceho zadania. 
 
 ### Úlohy
-- Vytvoriť vlastný projekt s využitím grafického rozhrania CubeMX.
-- Nakonfigurovať periférie MCU podľa potrieb tohto zadania (input/output/interrupt) (**0.5 bodu**).
-- V obsluhe prerušenia implementovať "debounce", aby sa predišlo falošnej detekcii (zo zadania 2) (**1 bod**).
+- Vytvoriť vlastný projekt s využitím grafického rozhrania CubeMX. Konfiguráciu GPIO v grafickom rozhraní vynechajte (konfigurácia GPIO bez LL knižnice).
+- Nakonfigurovať periférie MCU podľa potrieb tohto zadania s využitím CMSIS knižnice (input/output/interrupt) (**0.5 bodu**).
+- V obsluhe prerušenia implementovať "debounce", aby sa predišlo falošnej detekcii (zo zadania 2). (**1 bod**).
 - Po úspešnom detegovaní nábežnej/dobežnej hrany zmeniť stav LED (zvoľte si, ktorú hranu chcete detegovať) (**0.5 bodu**).
+  
+- Nepouživať v prerušení "delay" a nekopírovať ukážkovú funkciu! (**0 bodov za zadanie**)
